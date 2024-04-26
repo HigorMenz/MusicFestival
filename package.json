@@ -1,0 +1,17 @@
+{
+  "name": "event",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css ",
+    "dev": "gulp dev" 
+  },
+  "author": "Higor Menzinger",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.75.0"
+  }
+}
