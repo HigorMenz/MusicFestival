@@ -2,7 +2,7 @@
 @use "base/mixins" as m;
 
 .header {
-	background-color: v.$cyan;
+	background-color: v.$black;
 
 	.header__container {
 		padding: 2rem;
@@ -21,7 +21,7 @@
 				
 			}
 			&:hover {
-				color: v.$yellow;
+				color: v.$pink;
 			}
 		}
 	}
@@ -41,7 +41,7 @@
 	a {
 		color: v.$white;
 		&:hover {
-			color: v.$yellow;
+			color: v.$pink;
 		}
 	}
 }

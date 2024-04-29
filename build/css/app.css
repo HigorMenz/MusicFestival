@@ -328,12 +328,12 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: #000000;
+  color: #121212;
   font-size: 2rem;
 }
 
 p {
-  color: #000000;
+  color: #121212;
   line-height: 1.5;
 }
 
@@ -378,7 +378,7 @@ body > section {
 }
 
 .header {
-  background-color: #4CB8B3;
+  background-color: #121212;
 }
 .header .header__container {
   padding: 2rem;
@@ -401,7 +401,7 @@ body > section {
   }
 }
 .header .header__container h1:hover {
-  color: #fdda00;
+  color: #F53756;
 }
 
 .navbar {
@@ -422,5 +422,66 @@ body > section {
   color: #FFFFFF;
 }
 .navbar a:hover {
-  color: #fdda00;
+  color: #F53756;
+}
+
+.video {
+  position: relative;
+  color: #FFFFFF;
+  min-height: 50rem;
+  max-height: 65rem;
+  overflow: hidden;
+}
+.video .overlay {
+  position: absolute;
+  background: linear-gradient(270deg, rgba(117, 47, 151, 0.6), rgba(57, 23, 73, 0.9));
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+.video video {
+  width: auto;
+  display: block;
+}
+@media (min-width: 1200px) {
+  .video video {
+    width: 100%;
+  }
+}
+
+.video__container p {
+  background-color: #F53756;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.video__container h2 {
+  margin-bottom: 0;
+  font-size: 7rem;
+}
+
+.about__festival {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .about__festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+
+.festival__content {
+  margin-top: 2rem;
+}
+.festival__content h2 {
+  margin-bottom: 2rem;
+}
+.festival__content .date {
+  color: #4CB8B3;
+  font-weight: 700;
 }
