@@ -1,0 +1,71 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.lineup {
+  background-color: v.$black;
+
+  h3,
+  .day {
+    text-align: center;
+    color: v.$white;
+  }
+  .day {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: v.$white
+  }
+}
+.scenary__container{
+    
+    @include m.container;
+    @include m.tablet{
+        @include m.grid(2, 5rem)
+    }
+
+    
+}
+
+.scenary{
+    padding-top:2rem;
+    border-radius: .5rem;
+    .scenary__name{
+        font-size: 3rem;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        color: v.$black;
+
+    }
+}
+.schedule{
+    @include m.list-reset;
+    color: v.$black;
+    margin-bottom: 4rem;
+    @include m.tablet{
+        margin-bottom: 0;
+    }
+   
+
+    li{
+        padding: 2.5rem;
+        font-weight: 700;
+        span{
+            font-weight: 500;
+        }
+    }
+}
+
+.bg__cyan{
+    background-color: v.$cyan;
+    li:nth-child(odd){
+        background-color: lighten(v.$cyan, 5%);
+    }
+}
+
+.bg__pink{
+    background-color: v.$pink;
+    li:nth-child(odd){
+        background-color: lighten(v.$pink, 5%);
+    }
+}
