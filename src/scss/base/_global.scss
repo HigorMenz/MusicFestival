@@ -17,6 +17,9 @@ body {
     color: v.$black;
     font-size: 2rem;
     background-color: #e8e8e8;
+    &.overflow-hidden{
+        overflow: hidden;
+    }
 }
 p {
     color: v.$black;
