@@ -51,7 +51,8 @@
 
 	a {
 		color: v.$white;
-		&:hover {
+		&:hover,
+		&.active {
 			color: v.$pink;
 		}
 	}

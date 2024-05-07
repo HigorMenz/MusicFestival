@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   buildGallery();
   fixedNav();
+  linkFocus();
+  scrollNav();
 });
 
 function fixedNav(){
@@ -65,4 +67,50 @@ function closeModal() {
     const body = document.querySelector("body");
     body.classList.remove("overflow-hidden");
   }, 500);
+}
+
+function linkFocus(){
+  document.addEventListener('scroll', function(){
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.navbar a');
+    let current = ""
+
+    sections.forEach(section =>{
+
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight
+
+      if(window.scrollY >= (sectionTop - sectionHeight / 3)){
+
+        current = section.id;
+      }
+
+      navLinks.forEach(link => {
+        link.classList.remove('active')
+        if (link.getAttribute('href') === "#" + current){
+          link.classList.add('active')
+        }
+      } )
+
+
+    })
+  })
+}
+
+function scrollNav(){
+  const navLinks = document.querySelectorAll('.navbar a')
+
+  navLinks.forEach(link =>{
+    link.addEventListener('click', e => {
+      e.preventDefault()
+
+      const sectionScroll = e.target.getAttribute('href')
+      const section = document.querySelector(sectionScroll)
+
+      section.scrollIntoView({behavior : 'smooth'})
+
+
+
+    })
+  })
 }
